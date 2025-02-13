@@ -1,4 +1,4 @@
-*, **:before, **:after{
+*, *:before, *:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,6 +7,7 @@
 body{
     background-color: #222;
     color: #FFF;
+    font-family: 'Dunking Grotesk';
 }
 
 a {
@@ -21,6 +22,9 @@ li {
 button {
     background-color: transparent;
     border: 1px solid #FFF;
+    border-radius: .25rem;
     color: #FFF;
+    cursor: pointer;
+    font-family: 'Dunking Grotesk';
     padding: .5rem 2rem;
 }

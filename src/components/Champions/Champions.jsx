@@ -1,9 +1,10 @@
 import ChampionsCards from "./ChampionsCards";
+import styles from './Champions.module.css'
 
 const Champions = () => {
     return (
         <>
-            <section className="champions">
+            <section className='champions'>
                 <div className="champions-text">
                     <h1>CAMPEÕES</h1>
                     <h2> Os times com mais títulos</h2>

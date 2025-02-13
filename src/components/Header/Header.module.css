@@ -1,0 +1,41 @@
+#header {
+    padding: 3rem 8rem;
+
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .headerContent__menu {
+            display: flex;
+
+            .headerContent__menu__item {
+                margin: 0 2.5rem;
+            }
+        }
+
+        .interact {
+            display: flex;
+            align-items: center;
+            
+            .btn {
+                padding: .75rem 3rem;
+            }
+
+            .changeLanguage {
+                margin-left: 1rem;
+                display: flex;
+
+                .BiBasketball, .BiChevronDown {
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
