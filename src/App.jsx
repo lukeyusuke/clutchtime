@@ -10,17 +10,15 @@ import './App.css';
 function App() {
 
   return (
-    <>
+    <div>
       <Header/>
-      <main>
-        <Home/>
-        <Champions/>
-        <Gallery/>
-        <Players/>
-        <Plays/>
-      </main>
+      <Home/>
+      <Champions/>
+      <Gallery/>
+      <Players/>
+      <Plays/>
       <Footer/>
-    </>
+    </div>
   )
 }
 
