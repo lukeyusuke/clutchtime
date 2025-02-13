@@ -6,12 +6,12 @@
         padding: 6rem 8rem;
         width: 100%;
         max-width: 1920px;
-
+        
         .homeContent__text {
-            width: 87%;
+            width: 88%;
 
             h1 {
-                font-size: 8rem;
+                font-size: 7.2rem;
             }
     
             p {

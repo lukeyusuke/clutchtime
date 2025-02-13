@@ -1,7 +1,9 @@
+import styles from './Champions.module.css';
+
 const ChampionsCards = ({champs, image, text}) => {
     return (
         <>
-            <div className="champions-box__content">
+            <div className={styles.championsContent__box__stats}>
                 <span>{champs}</span>
                 <img src={image} alt={text}/>
             </div>
