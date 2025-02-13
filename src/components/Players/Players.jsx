@@ -1,98 +1,18 @@
+import PlayersCards from "./PlayersCards";
+
 const Players = () => {
     return (
         <>
             <section className="players">
-                <h1>JOGADORES</h1>
-                <h2>ALGUNS DOS MELHORES JOGADORES DO MUNDO</h2>
+                <div className="players-text">
+                    <h1>JOGADORES</h1>
+                    <h2>ALGUNS DOS MELHORES JOGADORES DO MUNDO</h2>
+                </div>
                 <div className="players-box">
-                    <div className="players-box__style">
-                        <img src="./src/assets/images/players/shai.png" alt="Shai Gilgeous-Alexander - Jogador da NBA"/>
-                        <div className="players-box__info">
-                            <h2> Shai Gilgeous <br/>ALEXANDER</h2>
-                            <div className="players-box__info__hw">
-                                <div className="players-box__info__height">
-                                    <p> Altura </p>
-                                    <span> 1.98 </span>
-                                </div>
-                                <div className="players-box__info__weight">
-                                    <p> Peso </p>
-                                    <span> 88kg </span>
-                                </div>
-                            </div>
-                            <div className="players-box__info__stats">
-                                <p> Posição: Armador </p>
-                                <p> Nasceu em: 12/07/1998 </p>
-                                <p> Idade: 26 anos </p>
-                                <p> De: Toronto, Canadá </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="players-box__style">
-                        <img src="./src/assets/images/players/antman.png" alt="Anthony Edwards - Jogador da NBA"/>
-                        <div className="players-box__info">
-                            <h2> Anthony <br/>Edwards</h2>
-                            <div className="players-box__info__hw">
-                                <div className="players-box__info__height">
-                                    <p> Altura </p>
-                                    <span> 1.93 </span>
-                                </div>
-                                <div className="players-box__info__weight">
-                                    <p> Peso </p>
-                                    <span> 102kg </span>
-                                </div> 
-                            </div>
-                            <div className="players-box__info__stats">
-                                <p> Posição: Ala-Armador </p>
-                                <p> Nasceu em: 05/08/2001 </p>
-                                <p> Idade: 23 anos </p>
-                                <p> De: Geórgia, EUA </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="players-box__style">
-                        <img src="./src/assets/images/players/lamelo.png" alt="LaMelo Ball - Jogador da NBA"/>
-                        <div className="players-box__info">
-                            <h2> LaMelo Ball <br/>Ball</h2>
-                            <div className="players-box__info__hw">
-                                <div className="players-box__info__height">
-                                    <p> Altura </p>
-                                    <span> 2.01 </span>
-                                </div>
-                                <div className="players-box__info__weight">
-                                    <p> Peso </p>
-                                    <span> 82kg </span>
-                                </div> 
-                            </div>
-                            <div className="players-box__info__stats">
-                                <p> Posição: Armador </p>
-                                <p> Nasceu em: 22/08/2001 </p>
-                                <p> Idade: 23 anos </p>
-                                <p> De: Califórnia, EUA </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="players-box__style">
-                        <img src="./src/assets/images/players/morant.png" alt="Ja Morant - Jogador da NBA"/>
-                        <div className="players-box__info">
-                            <h2> Ja <br/>Morant</h2>
-                            <div className="players-box__info__hw">
-                                <div className="players-box__info__height">
-                                    <p> Altura </p>
-                                    <span> 1.88 </span>
-                                </div>
-                                <div className="players-box__info__weight">
-                                    <p> Peso </p>
-                                    <span> 79kg </span>
-                                </div> 
-                            </div>
-                            <div className="players-box__info__stats">
-                                <p> Posição: Armador </p>
-                                <p> Nasceu em: 10/08/1999 </p>
-                                <p> Idade: 25 anos </p>
-                                <p> De: Carolina do Sul, EUA </p>
-                            </div>
-                        </div>
-                    </div>
+                    <PlayersCards image='./src/assets/images/players/shai.png' text='Shai Gilgeous-Alexander - Jogador da NBA' name='Shai Gilgeous' last_name='ALEXANDER' height='1.98' weight='88kg' position='Armador' dt_birth='12/07/1998' age='26' from='Toronto, Canadá'/>
+                    <PlayersCards image='./src/assets/images/players/antman.png' text='Anthony Edwards - Jogador da NBA' name='Anthony' last_name='EDWARDS' height='1.93' weight='102kg' position='Ala-armador' dt_birth='05/08/2001' age='23' from='Geórgia, EUA'/>
+                    <PlayersCards image='./src/assets/images/players/lamelo.png' text='LaMelo Ball - Jogador da NBA' name='LaMelo' last_name='BALL' height='2.01' weight='82kg' position='Armador' dt_birth='22/08/2001' age='23' from='Califórnia, EUA'/>
+                    <PlayersCards image='./src/assets/images/players/morant.png' text='Ja Morant - Jogador da NBA' name='Ja' last_name='MORANT' height='1.88' weight='79kg' position='Armador' dt_birth='10/08/1999' age='25' from='Carolina do Sul, EUA'/>
                 </div>
                 <div className="carousel">
                     <img src="./src/assets/images/lines/line.png" alt="Lista com nome de jogadores"/>
