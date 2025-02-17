@@ -1,0 +1,38 @@
+#footer {
+    .footerContent {
+        text-align: center;
+        
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-weight: 100;
+            line-height: 1.35rem;
+            margin: 3rem 0 7rem 0;
+        }
+
+        .footerContent__socialMedias {
+            margin-bottom: 1rem;
+
+            .footerContent__socialMedias__logo {
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                margin: 0 2rem;
+            }
+        }
+
+        .rights {
+            b {
+                font-family: 'a dripping marker';
+                font-size: 1.5rem;
+            }
+        }
+
+        .carouselPlayers {
+            padding: 2rem 0;
+            overflow-x: hidden;
+        }
+    }
+}

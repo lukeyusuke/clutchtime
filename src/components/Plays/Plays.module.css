@@ -4,7 +4,7 @@
     
     .playsContent {
         position: relative;
-        padding: 22rem 8rem;
+        padding: 22rem 8rem 15rem 8rem;
 
         .playsContent__text {
             text-align: right;
@@ -13,7 +13,7 @@
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: 580px;
+                font-size: 560px;
                 left: -5rem;
                 top: 0;
                 position: absolute;

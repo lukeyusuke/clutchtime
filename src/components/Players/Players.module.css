@@ -8,7 +8,7 @@
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: 430px;
+                font-size: 415px;
                 left: -2rem;
                 top: 0;
                 position: absolute;
@@ -84,6 +84,7 @@
     }
 
     .carousel {
+        overflow-x: hidden;
         padding-bottom: 18rem;
     }
 }

@@ -1,3 +1,4 @@
+import styles from './Footer.module.css';
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
@@ -5,18 +6,22 @@ import { BiLogoInstagram } from "react-icons/bi";
 const Footer = () => {
     return (
         <>
-            <footer className="footer">
-                <h1>Agora é sua vez de entrar em quadra</h1>
-                <p> Os melhores jogadores, os maiores campeões e todas as histórias<br/> que já passaram pela quadra, chegou a hora da bola laranja subir!!</p>
-                <div className="footer__social-medias">
-                    <BiLogoLinkedin/>
-                    <BiLogoGmail/>
-                    <BiLogoInstagram/>
-                </div>
-                <p> Todos os direitos reservados. Feito por <b>Luke Yusuke</b></p>
-                <div className="carousel-players">
-                    <img src="./src/assets/images/footer/line.png" alt="Lista de jogadores de basquete"/>
-                    <img src="./src/assets/images/footer/line2.png" alt="Lista de jogadores de basquete"/>
+            <footer id={styles.footer}>
+                <div className={styles.footerContent}>
+                    <div className={styles.footerContent__text}>
+                        <h1>AGORA É SUA VEZ DE<br/> ENTRAR EM QUADRA</h1>
+                        <p> Os melhores jogadores, os maiores campeões e todas as histórias<br/> que já passaram pela quadra, chegou a hora da bola laranja subir!!</p>
+                    </div>
+                    <div className={styles.footerContent__socialMedias}>
+                        <a href=''><BiLogoLinkedin className={styles.footerContent__socialMedias__logo}/></a>
+                        <a href=""><BiLogoGmail className={styles.footerContent__socialMedias__logo}/></a>
+                        <a href=""><BiLogoInstagram className={styles.footerContent__socialMedias__logo}/></a>
+                    </div>
+                    <p className={styles.rights}> Todos os direitos reservados. Feito por <b>Luke Yusuke</b></p>
+                    <div className={styles.carouselPlayers}>
+                        <img src="./src/assets/images/footer/line.png" alt="Lista de jogadores de basquete"/>
+                        <img src="./src/assets/images/footer/line2.png" alt="Lista de jogadores de basquete"/>
+                    </div>
                 </div>
             </footer>
         </>
