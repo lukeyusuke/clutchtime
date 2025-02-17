@@ -5,10 +5,9 @@
     .galleryContent {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        padding: 0 8rem 12rem 8rem;
-        max-width: 1366px;
+        padding: 0rem 8rem 12rem 8rem;
         width: 100%;
 
         .galleryContent__text {

@@ -4,9 +4,7 @@
     
     .championsContent {
         position: relative;
-        padding: 18rem 8rem;
-        max-width: 1366px;
-        width: 100%;
+        padding: 20rem 8rem;
         
         .championsContent__text {
             text-align: right;
@@ -15,8 +13,8 @@
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: 2610%;
-                left: 0;
+                font-size: 500px;
+                left: -7rem;
                 top: 0;
                 position: absolute;
             }

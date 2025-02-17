@@ -1,16 +1,15 @@
 #players {
     .playersContent {
         position: relative;
-        padding: 14rem  8rem;
-        max-width: 1366px;
+        padding: 16rem 8rem;
         width: 100%;
 
         .playersContent__text {
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: 2330%;
-                left: 0;
+                font-size: 430px;
+                left: -2rem;
                 top: 0;
                 position: absolute;
             }
@@ -23,7 +22,8 @@
 
         .playersContent__box {
             display: flex;
-            gap: 2rem;
+            justify-content: space-between;
+            gap: 2.5rem;
             flex-wrap: wrap;
             margin-bottom: 2rem;
 
@@ -78,22 +78,6 @@
                     }
                 }
 
-            }
-
-            .playersContent__stats:nth-child(2){
-                margin-left: 1rem;
-            }
-
-            .playersContent__stats:nth-child(3){
-                margin-left: 2.8rem;
-            }
-
-            .playersContent__stats:nth-child(4){
-                margin-left: 3rem;
-            }
-
-            .playersContent__stats:nth-child(even){
-                margin-top: 4rem;
             }
 
         }

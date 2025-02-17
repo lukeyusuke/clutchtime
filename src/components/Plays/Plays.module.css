@@ -1,0 +1,59 @@
+#plays{
+    display: flex;
+    justify-content: center;
+    
+    .playsContent {
+        position: relative;
+        padding: 22rem 8rem;
+
+        .playsContent__text {
+            text-align: right;
+            margin-bottom: 3rem;
+
+            h1 {
+                font-family: 'a dripping marker';
+                opacity: 5%;
+                font-size: 580px;
+                left: -5rem;
+                top: 0;
+                position: absolute;
+            }
+
+            h2 {
+                font-size: 4rem;
+            }
+
+            p {
+                margin-bottom: 5rem;
+                font-weight: 100;
+                line-height: 1.35rem;
+            }
+        }
+
+        .playsContent__plays {
+            display: flex;
+            align-items: center;
+
+            img:nth-child(odd) {
+                width: 350px;
+            }
+
+            img:nth-child(2) {
+                width: 420px;
+            }
+        }
+
+        .buttons {
+            margin-top: 4rem;
+            text-align: center;
+
+            .buttons__style {
+                background-color: #1B1B1B;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                margin: 0 .5rem;
+            }
+        }
+    }
+}
