@@ -1,0 +1,26 @@
+#gallery {
+    display: flex;
+    justify-content: center;
+
+    .galleryContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8rem 12rem 8rem;
+        max-width: 1366px;
+        width: 100%;
+
+        .galleryContent__text {
+            h2 {
+                font-size: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+
+            button {
+                padding: 1rem 3.5rem;
+                letter-spacing: .2rem;
+            }
+        }
+    }
+}
