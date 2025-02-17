@@ -1,0 +1,105 @@
+#players {
+    .playersContent {
+        position: relative;
+        padding: 14rem  8rem;
+        max-width: 1366px;
+        width: 100%;
+
+        .playersContent__text {
+            h1 {
+                font-family: 'a dripping marker';
+                opacity: 5%;
+                font-size: 2330%;
+                left: 0;
+                top: 0;
+                position: absolute;
+            }
+
+            h2 {
+                font-size: 4rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        .playersContent__box {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+
+            .playersContent__stats {
+                display: flex;
+
+                img {
+                    margin-right: 1.25rem;
+                    width: 288px;
+                    height: 360px;
+                }
+
+                .playersContent__info {
+                    h3 {
+                        font-size: 1rem;
+                        font-weight: 100;
+                        margin-bottom: .25rem;
+                    }
+
+                    h2 {
+                        font-size: 2.25rem;
+                    }
+
+                    .playersContent__info__hw {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 1rem;
+
+                        .playersContent__height, .playersContent__weight {
+                            text-align: center;
+                            
+                            p {
+                                font-size: 1rem;
+                                font-weight: 100;
+                                margin-bottom: .25rem;
+                            }
+
+                            span {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+
+                    .playersContent__info__stats {
+                        margin-top: 5rem;
+                        
+                        p {
+                            margin: 1.25rem 0;
+                            font-weight: 100;
+                        }
+                    }
+                }
+
+            }
+
+            .playersContent__stats:nth-child(2){
+                margin-left: 1rem;
+            }
+
+            .playersContent__stats:nth-child(3){
+                margin-left: 2.8rem;
+            }
+
+            .playersContent__stats:nth-child(4){
+                margin-left: 3rem;
+            }
+
+            .playersContent__stats:nth-child(even){
+                margin-top: 4rem;
+            }
+
+        }
+    }
+
+    .carousel {
+        padding-bottom: 18rem;
+    }
+}
