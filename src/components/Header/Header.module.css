@@ -3,12 +3,13 @@
     justify-content: center;
     
     .headerContent {
-        padding: 3rem 8rem;
+        padding: 3rem 2rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        max-width: 1366px;
         
         .logo {
             font-weight: bold;
@@ -20,6 +21,14 @@
 
             .headerContent__menu__item {
                 margin: 0 2.5rem;
+                
+                a {
+                    transition: .5s;
+
+                    &:hover {
+                        color: rgb(92, 92, 92)
+                    }
+                }
             }
         }
 
@@ -28,18 +37,153 @@
             align-items: center;
             
             .btn {
+                position: relative;
                 padding: .75rem 3rem;
-            }
+                overflow: hidden;
+                transition: .5s;
 
+                &:hover {
+                    color: #000;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: #FFF;
+                    transition: .5s cubic-bezier(1, 2, .2, .6);
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+            }
+            
+            .BiMenu {
+                font-size: 1.5rem;
+                display: none;
+                cursor: pointer;
+            }
+            
             .changeLanguage {
-                margin-left: 1rem;
+                position: relative;
+                margin-left: 2rem;
                 display: flex;
 
-                .BiBasketball, .BiChevronDown {
+                .changeLanguage__flag {
                     cursor: pointer;
+                }
+
+                .BiChevronDown {
                     font-size: 1.5rem;
+                }
+
+                .dropdown {
+                    display: none;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 3rem;
+                    right: -63%;
+                    background-color: #1e1e1e;
+                    width: 120px;
+                    padding: 1rem;
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    ul {
+                        li {
+                            cursor: pointer;
+                            transition: .5s;
+
+                            &:hover {
+                                color: rgb(92, 92, 92)
+                            }
+
+                            &:first-child {
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                .dropdown::before {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    transform: rotate(135deg);
+                    right: 46%;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #1e1e1e;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #header {
+        .headerContent {
+            padding: 3rem 5rem;
+            .headerContent__nav {
+                display: none;
+                
+                &.active {
+                    display: flex;
+                    
+                    .headerContent__menu {
+                        animation: slideInFromBottom .5s ease;
+                        flex-direction: column;
+                        padding-top: 5rem;
+                        gap: 5rem;
+                        background-color: rgba(0,0,0,0.9);
+                        height: 100vh;
+                        left: 0;
+                        top: 7rem;
+                        text-align: center;
+                        position: absolute;
+                        width: 100%;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .btn {
+                display: none;
+            }
+
+            .interact {
+                .BiMenu {
+                    display: block;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #header {
+        .headerContent {
+            padding: 3rem 2rem;
+        }
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+    
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
 }

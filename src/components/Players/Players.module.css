@@ -1,34 +1,40 @@
 #players {
+    display: flex;
+    justify-content: center;
+
     .playersContent {
         position: relative;
-        padding: 16rem 8rem;
+        padding: 16rem 2rem;
         width: 100%;
+        max-width: 1366px;
 
         .playersContent__text {
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: 415px;
-                left: -2rem;
+                font-size: clamp(4rem, 26.5vw, 32rem);
+                left: -5rem;
                 top: 0;
                 position: absolute;
             }
 
             h2 {
-                font-size: 4rem;
+                font-size: clamp(1.4rem, 4vw, 5rem);
                 margin-bottom: 4rem;
             }
         }
 
         .playersContent__box {
             display: flex;
-            justify-content: space-between;
-            gap: 2.5rem;
+            gap: 2rem;
+            justify-content: space-around;
             flex-wrap: wrap;
             margin-bottom: 2rem;
 
             .playersContent__stats {
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
 
                 img {
                     margin-right: 1.25rem;
@@ -79,12 +85,55 @@
                 }
 
             }
+        }
+    }
 
+}
+
+.carousel {
+    padding-bottom: 14rem;
+}
+
+@media screen and (max-width: 1024px) {
+    #players {
+        .playersContent {
+            padding: 8rem 5rem;
+
+            .playersContent__text {
+                h1 {
+                    left: 0rem;
+                }
+
+                h2, p {
+                    padding-left: 3rem;
+                }
+            }
+
+            .playersContent__box {
+                justify-content: center;
+                gap: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    #players {
+        .playersContent {
+            padding: 8rem 2rem;
+
+            .playersContent__text {
+                h2, p {
+                    padding: 0;
+                }
+            }
         }
     }
 
     .carousel {
-        overflow-x: hidden;
-        padding-bottom: 18rem;
+        img {
+            padding-bottom: 0;
+            width: 2000px;
+        }
     }
 }

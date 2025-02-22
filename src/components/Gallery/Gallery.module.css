@@ -4,10 +4,11 @@
 
     .galleryContent {
         display: flex;
+        padding: 0rem 2rem 12rem 2rem;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        padding: 0rem 8rem 12rem 8rem;
+        max-width: 1366px;
         width: 100%;
 
         .galleryContent__text {
@@ -17,9 +18,85 @@
             }
 
             button {
+                position: relative;
                 padding: 1rem 3.5rem;
                 letter-spacing: .2rem;
+                overflow: hidden;
+                transition: .5s;
+
+                &:hover {
+                    color: #000;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: #FFF;
+                    transition: .5s cubic-bezier(1, 2, .2, .6);
+                }
+    
+                &:hover::before {
+                    width: 100%;
+                }
             }
         }
     }
+}
+
+@media screen and (max-width: 1024px) {
+    #gallery {
+        .galleryContent {
+            padding: 0rem 5rem 12rem 5rem;
+            display: block;
+            position: relative;
+
+            .galleryContent__text {
+                h2 {
+                    text-align: center;
+                    padding-bottom: 5rem;
+                }
+
+                button {
+                    position: absolute;
+                    bottom: 3rem;
+                }
+            }
+
+            img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #gallery {
+        .galleryContent {
+            padding: 0rem 5em 12rem 5rem;
+            .galleryContent__text {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #gallery {
+        .galleryContent {
+            padding: 0rem 2em 12rem 2rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
 }

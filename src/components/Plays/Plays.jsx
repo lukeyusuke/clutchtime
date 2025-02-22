@@ -10,7 +10,7 @@ const Plays = () => {
                     <div className={styles.playsContent__text}>
                         <h1>JOGADAS</h1>
                         <h2>JOGADAS INCRÍVEIS<br/> DA TEMPORADA</h2>
-                        <p>Os melhores jogadores, os maiores campeões e todas as histórias<br/> que já passaram pela quadra, chegou a hora da bola laranja subir!!  </p>
+                        <p>Os melhores jogadores, os maiores campeões e todas as histórias<br/>  </p>
                     </div>
                     <div className={styles.playsContent__plays}>
                         <img src="./src/assets/images/plays/play2.png" alt="Vídeo da jogada 1"/>

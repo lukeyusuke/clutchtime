@@ -8,7 +8,7 @@ const Players = () => {
                 <div className={styles.playersContent}>
                     <div className={styles.playersContent__text}>
                         <h1>JOGADORES</h1>
-                        <h2>ALGUNS DOS MELHORES JOGADORES DO MUNDO</h2>
+                        <h2>ALGUNS DOS MELHORES<br/> JOGADORES DO MUNDO</h2>
                     </div>
                     <div className={styles.playersContent__box}>
                         <PlayersCards image='./src/assets/images/players/shai.png' text='Shai Gilgeous-Alexander - Jogador da NBA' name='Shai Gilgeous' last_name='ALEXANDER' height='1.98' weight='88kg' position='Armador' dt_birth='12/07/1998' age='26' from='Toronto, Canadá'/>
@@ -17,11 +17,11 @@ const Players = () => {
                         <PlayersCards image='./src/assets/images/players/morant.png' text='Ja Morant - Jogador da NBA' name='Ja' last_name='MORANT' height='1.88' weight='79kg' position='Armador' dt_birth='10/08/1999' age='25' from='Carolina do Sul, EUA'/>
                     </div>
                 </div>
-                    <div className={styles.carousel}>
-                        <img src="./src/assets/images/lines/line.png" alt="Lista com nome de jogadores"/>
-                        <img src="./src/assets/images/lines/line2.png" alt="Lista com nome de jogadores"/>
-                    </div>
             </section>
+            <div className={styles.carousel}>
+                <img src="./src/assets/images/lines/line.png" alt="Lista com nome de jogadores"/>
+                <img src="./src/assets/images/lines/line2.png" alt="Lista com nome de jogadores"/>
+            </div>
         </>
     )   
 }

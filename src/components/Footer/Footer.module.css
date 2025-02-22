@@ -3,13 +3,13 @@
         text-align: center;
         
         h1 {
-            font-size: 4rem;
+            font-size: clamp(1.8rem, 4vw, 5rem);
         }
 
         p {
             font-weight: 100;
-            line-height: 1.35rem;
-            margin: 3rem 0 7rem 0;
+            line-height: 1.5rem;
+            margin: 3rem 2rem 5rem 2rem;
         }
 
         .footerContent__socialMedias {
@@ -20,6 +20,11 @@
                 width: 40px;
                 height: 40px;
                 margin: 0 2rem;
+                transition: .5s;
+
+                &:hover {
+                    transform: translateY(-10%);
+                }
             }
         }
 
@@ -33,6 +38,18 @@
         .carouselPlayers {
             padding: 2rem 0;
             overflow-x: hidden;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #footer {
+        .footerContent {
+            .carouselPlayers {
+                img {
+                    width: 2000px;
+                }
+            }
         }
     }
 }

@@ -4,7 +4,9 @@
     
     .playsContent {
         position: relative;
-        padding: 22rem 8rem 15rem 8rem;
+        padding: 22rem 2rem 15rem 2rem;
+        max-width: 1366px;
+        width: 100%;
 
         .playsContent__text {
             text-align: right;
@@ -13,14 +15,15 @@
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: 560px;
+                font-size: clamp(8rem, 38vw, 35rem);
                 left: -5rem;
                 top: 0;
                 position: absolute;
             }
 
             h2 {
-                font-size: 4rem;
+                font-size: clamp(1.8rem, 4vw, 5rem);
+                padding-bottom: 1rem;
             }
 
             p {
@@ -33,13 +36,23 @@
         .playsContent__plays {
             display: flex;
             align-items: center;
+            justify-content: center;
 
             img:nth-child(odd) {
-                width: 350px;
+                width: clamp(3rem, 22vw, 20rem);
+                z-index: -1;
             }
 
+            img:nth-child(1){
+                margin-right: -5rem;
+            }
+            
             img:nth-child(2) {
-                width: 420px;
+                width: clamp(18rem, 35vw, 27rem);
+            }
+
+            img:nth-child(3){
+                margin-left: -5rem;
             }
         }
 
@@ -54,6 +67,38 @@
                 cursor: pointer;
                 margin: 0 .5rem;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #plays {    
+        .playsContent {
+            padding: 10rem 5rem;
+
+            .playsContent__text {
+                h1 {
+                    left: 0;
+                }
+            }
+
+            .playsContent__plays {
+                img:nth-child(1){
+                    margin-right: -3.5rem;
+                }
+
+                img:nth-child(3){
+                    margin-left: -3.5rem;
+                }
+            }
+        }
+    };
+}
+
+@media screen and (max-width: 480px) {
+    #plays {
+        .playsContent {
+            padding: 10rem 2rem;
         }
     }
 }

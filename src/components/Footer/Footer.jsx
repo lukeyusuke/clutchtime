@@ -1,7 +1,7 @@
 import styles from './Footer.module.css';
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
-import { BiLogoInstagram } from "react-icons/bi";
+import { BiLogoDiscord } from "react-icons/bi";
 
 const Footer = () => {
     return (
@@ -13,9 +13,9 @@ const Footer = () => {
                         <p> Os melhores jogadores, os maiores campeões e todas as histórias<br/> que já passaram pela quadra, chegou a hora da bola laranja subir!!</p>
                     </div>
                     <div className={styles.footerContent__socialMedias}>
-                        <a href=''><BiLogoLinkedin className={styles.footerContent__socialMedias__logo}/></a>
+                        <a href='https://www.linkedin.com/in/lukeyusuke/'><BiLogoLinkedin className={styles.footerContent__socialMedias__logo}/></a>
                         <a href=""><BiLogoGmail className={styles.footerContent__socialMedias__logo}/></a>
-                        <a href=""><BiLogoInstagram className={styles.footerContent__socialMedias__logo}/></a>
+                        <a href=""><BiLogoDiscord className={styles.footerContent__socialMedias__logo}/></a>
                     </div>
                     <p className={styles.rights}> Todos os direitos reservados. Feito por <b>Luke Yusuke</b></p>
                     <div className={styles.carouselPlayers}>

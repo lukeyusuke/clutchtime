@@ -6,8 +6,10 @@ const PlayersCards = ({image, text, name, last_name ,height, weight, position, d
             <div className={styles.playersContent__stats}>
                 <img src={image} alt={text}/>
                 <div className={styles.playersContent__info}>
-                    <h3>{name}</h3>
-                    <h2>{last_name}</h2>
+                    <div className={styles.playersContent__name}>
+                        <h3>{name}</h3>
+                        <h2>{last_name}</h2>
+                    </div>
                     <div className={styles.playersContent__info__hw}>
                         <div className={styles.playersContent__height}>
                             <p> Altura </p>
