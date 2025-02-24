@@ -1,10 +1,10 @@
-#players {
+.players {
     display: flex;
     justify-content: center;
 
     .playersContent {
         position: relative;
-        padding: 16rem 2rem;
+        padding: 5rem 5rem 25rem 5rem;
         width: 100%;
         max-width: 1366px;
 
@@ -12,15 +12,15 @@
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: clamp(4rem, 26.5vw, 32rem);
-                left: -5rem;
+                font-size: clamp(4rem, 26vw, 32rem);
+                margin-left: -8rem;
                 top: 0;
-                position: absolute;
             }
 
             h2 {
                 font-size: clamp(1.4rem, 4vw, 5rem);
                 margin-bottom: 4rem;
+                margin-top: -14rem;
             }
         }
 
@@ -92,13 +92,21 @@
 
 .carousel {
     padding-bottom: 14rem;
+    overflow: hidden;
+
+    .carousel__names:first-child {
+        animation: scrollXToLeft 50s linear infinite;
+    }
+
+    .carousel__names:nth-child(2) {
+        margin-left: -3300px;
+        animation: scrollXToRight 50s linear infinite;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-    #players {
+    .players {
         .playersContent {
-            padding: 8rem 5rem;
-
             .playersContent__text {
                 h1 {
                     left: 0rem;
@@ -118,7 +126,7 @@
 }
 
 @media screen and (max-width: 480px){
-    #players {
+    .players {
         .playersContent {
             padding: 8rem 2rem;
 
@@ -135,5 +143,17 @@
             padding-bottom: 0;
             width: 2000px;
         }
+    }
+}
+
+@keyframes scrollXToLeft {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollXToRight {
+    to {
+        transform: translateX(100%);
     }
 }

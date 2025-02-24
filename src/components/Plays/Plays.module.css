@@ -1,29 +1,28 @@
-#plays{
+.plays{
     display: flex;
     justify-content: center;
     
     .playsContent {
         position: relative;
-        padding: 22rem 2rem 15rem 2rem;
+        padding: 5rem 5rem 25rem 5rem;
         max-width: 1366px;
         width: 100%;
 
         .playsContent__text {
             text-align: right;
             margin-bottom: 3rem;
-
+            
             h1 {
                 font-family: 'a dripping marker';
                 opacity: 5%;
-                font-size: clamp(8rem, 38vw, 35rem);
-                left: -5rem;
-                top: 0;
-                position: absolute;
+                font-size: clamp(8rem, 35.5vw, 35rem);
+                margin-left: -8rem;
             }
-
+            
             h2 {
                 font-size: clamp(1.8rem, 4vw, 5rem);
                 padding-bottom: 1rem;
+                margin-top: -20rem;
             }
 
             p {
@@ -72,10 +71,8 @@
 }
 
 @media screen and (max-width: 1024px) {
-    #plays {    
+    .plays {    
         .playsContent {
-            padding: 10rem 5rem;
-
             .playsContent__text {
                 h1 {
                     left: 0;
@@ -96,7 +93,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    #plays {
+    .plays {
         .playsContent {
             padding: 10rem 2rem;
         }
