@@ -1,21 +1,24 @@
+@use '../../assets/styles/buttons';
+@use '../../assets/styles/displays';
+@use '../../assets/styles/mixins';
+
 .home {
-    display: flex;
-    justify-content: center;
+    @extend %center-display;
     
     .homeContent {
         padding: 6rem 5rem;
-        width: 100%;
-        max-width: 1366px;
+        @extend %layout-width;
         
-        .homeContent__text {
+        &__text {
             width: 85%;
 
             h1 {
-                font-size: clamp(32px, 7.7vw, 128px); 
+                font-size: clamp(32px, 7.7vw, 118px); 
             }
     
             p {
                 line-height: 1.5rem;
+                font-size: clamp(.8rem, 1.1vw, 1rem); 
                 text-align: right;
             }
         }
@@ -29,31 +32,13 @@
             overflow: hidden;
             transition: .5s;
         
-            &:hover {
-                color: #000;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                width: 0;
-                height: 100%;
-                background-color: #FFF;
-                transition: .5s cubic-bezier(1, 2, .2, .6);
-            }
-
-            &:hover::before {
-                width: 100%;
-            }
+            @extend %btn-style;
         }
 
     }
 }
 
-@media screen and (max-width: 1024px){
+@include mixins.tablet-screen {
     .home {
         .homeContent {
             text-align: center;
@@ -65,21 +50,22 @@
                 h1 {
                     padding-bottom: 1rem;
                 }
+
                 p {
                     text-align: center;
+                    width: 100%;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 480px){
+@include mixins.mobile-screen {
     .home {
         .homeContent {
-            .homeContent__text {
+            &__text {
                 p {
-                    padding: 1rem 2rem;
-                    text-align: center;
+                    padding: 1rem 5rem;
                 }
             }
         }

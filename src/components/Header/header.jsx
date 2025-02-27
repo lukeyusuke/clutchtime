@@ -1,6 +1,7 @@
+import styles from './Header.module.scss';
+import BrazilFlag from '../../assets/images/header/brazil.png';
 import { BiChevronDown } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
-import styles from './Header.module.css';
 import { useState } from "react";
 import { motion } from 'framer-motion';
 
@@ -21,7 +22,7 @@ const Header = () => {
             <motion.header id={styles.header} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }}>
                 <div className={styles.headerContent}>
                     <motion.a href='' className={styles.logo} initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}  whileInView={{ opacity: 1, y:0 }}> LOGO </motion.a>
-                    <motion.nav className={`${styles.headerContent__nav} ${menuActive ? styles.active : styles.close}`} initial={{ opacity: 0, y: -60 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+                    <nav className={`${styles.headerContent__nav} ${menuActive ? styles.active : styles.close}`}>
                         <ul className={styles.headerContent__menu}>
                             <li className={styles.headerContent__menu__item}><a href="#home">Home</a></li>
                             <li className={styles.headerContent__menu__item}><a href="#champions">Campeões</a></li>
@@ -29,7 +30,7 @@ const Header = () => {
                             <li className={styles.headerContent__menu__item}><a href="#players">Jogadores</a></li>
                             <li className={styles.headerContent__menu__item}><a href="#plays">Jogadas</a></li>
                         </ul>
-                    </motion.nav>
+                    </nav>
 
                     <div className={styles.interact}>
                         <a href="#">
@@ -39,7 +40,7 @@ const Header = () => {
 
                         <div className={styles.changeLanguage}>
                             <motion.div className={styles.changeLanguage__flag} onClick={toggleDropdown} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                                <img src='./src/assets/images/header/brazil.png' alt="Brazil Flag" />
+                                <img src={BrazilFlag} alt="Brazil Flag" />
                                 <BiChevronDown className={styles.BiChevronDown} />
                             </motion.div>
 
@@ -58,3 +59,4 @@ const Header = () => {
 }
 
 export default Header;
+

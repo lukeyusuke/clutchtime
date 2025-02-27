@@ -1,0 +1,23 @@
+@keyframes scrollXToLeft {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollXToRight {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

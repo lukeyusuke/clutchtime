@@ -1,4 +1,4 @@
-import styles from './Champions.module.css';
+import styles from './Champions.module.scss';
 
 const ChampionsCards = ({champs, image, text}) => {
     return (

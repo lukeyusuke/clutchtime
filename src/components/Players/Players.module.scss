@@ -1,0 +1,181 @@
+@use '../../assets/styles/displays';
+@use '../../assets/styles/mixins';
+@use '../../assets/styles/components';
+@use '../../assets/styles/animations';
+
+.players {
+    @extend %center-display;
+
+    .playersContent {
+        @extend %layout-width;
+        padding: 5rem 5rem 25rem 5rem;
+        position: relative;
+        
+        &__text {
+            margin-bottom: 2rem;
+            h1 {
+                @extend %h1-style;
+                @include mixins.h1-spacing(4rem, 26vw, 29rem, -8rem);
+            }
+
+            h2 {
+                @include mixins.h2-spacing(1.4rem, 4vw, 5rem, 4rem, -14rem);
+            }
+        }
+
+        &__box {
+            @include mixins.flex-content(flex, wrap, space-around, none);
+            gap: 2rem;
+            margin-bottom: 2rem;
+
+            .playersContent__stats {
+                @include mixins.flex-content(flex, wrap, center, none);
+
+                img {
+                    margin-right: 1.25rem;
+                    width: 288px;
+                    height: 360px;
+                }
+
+                .playersContent__info {
+                    h3 {
+                        font-size: 1rem;
+                        font-weight: 100;
+                        margin-bottom: .25rem;
+                    }
+
+                    h2 {
+                        font-size: 2.25rem;
+                    }
+
+                    &__hw {
+                        @include mixins.flex-content (flex, nowrap, space-between, center);
+                        margin-top: 1rem;
+
+                        .playersContent__height, .playersContent__weight {
+                            text-align: center;
+
+                            p {
+                                font-size: 1rem;
+                                font-weight: 100;
+                                margin-bottom: .25rem;
+                            }
+
+                            span {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+
+                    &__stats {
+                        margin-top: 5rem;
+
+                        p {
+                            margin: 1.25rem 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.carousel {
+    padding-bottom: 14rem;
+    overflow: hidden;
+
+    &__names:first-child {
+        animation: scrollXToLeft 50s linear infinite;
+    }
+
+    &__names:nth-child(2) {
+        margin-left: -3300px;
+        animation: scrollXToRight 50s linear infinite;
+    }
+}
+
+@include mixins.tablet-screen {
+    .players {
+        .playersContent {
+            padding: 15rem 5rem 25rem 5rem;
+
+            &__text {
+                h1 {
+                    margin-left: -3.8rem;
+                }
+
+                h2, p {
+                    padding-left: 3rem;
+                    margin-top: -11rem;
+                }
+            }
+
+            &__box {
+                justify-content: center;
+                gap: 4rem;
+            }
+        }
+    }
+}
+
+@include mixins.mobile-screen {
+    .players {
+        .playersContent {
+            padding: 15rem 2rem;
+
+            &__text {
+                h1 {
+                    margin-left: -1.5rem;
+                }
+
+                h2, p {
+                    padding: 0;
+                    margin-top: -4rem;
+                }
+            }
+
+            &__box {
+                .playersContent__stats {
+                    flex-direction: column;
+                    position: relative;
+
+                    img {
+                        margin-right: 0;
+                    }
+                    
+                    .playersContent__info {
+                        .playersContent__name {
+                            position: absolute;
+                            top: 16.9rem;
+                            left: 0rem;
+                            width: 100%;
+                            padding-top: 1rem;
+                            padding-left: 1rem;
+                            padding-bottom: .5rem;
+                            background: linear-gradient(to top, rgb(9, 9, 9, 1), rgba(9, 9, 9, 0.5));
+                            border-radius: 0 0 5px 5px;
+                        }
+
+                        &__stats {
+                            text-align: center;
+                            margin-top: 2rem;
+                        }
+
+                        &__hw {
+                            justify-content: center;
+                            gap: 6rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .carousel {
+        img {
+            padding-bottom: 0;
+            width: 2000px;
+        }
+    }
+}

@@ -1,41 +1,35 @@
+@use '../../assets/styles/displays';
+@use '../../assets/styles/mixins';
+@use '../../assets/styles/components';
+
 .plays{
-    display: flex;
-    justify-content: center;
+    @extend %center-display;
     
     .playsContent {
         position: relative;
-        padding: 5rem 5rem 25rem 5rem;
-        max-width: 1366px;
-        width: 100%;
+        padding: 2rem 5rem 25rem 5rem;
+        @extend %layout-width;
 
-        .playsContent__text {
+        &__text {
             text-align: right;
             margin-bottom: 3rem;
             
             h1 {
-                font-family: 'a dripping marker';
-                opacity: 5%;
-                font-size: clamp(8rem, 35.5vw, 35rem);
-                margin-left: -8rem;
+                @extend %h1-style;
+                @include mixins.h1-spacing(8.4rem, 35.5vw, 235rem, -8rem);
             }
             
             h2 {
-                font-size: clamp(1.8rem, 4vw, 5rem);
-                padding-bottom: 1rem;
-                margin-top: -20rem;
+                @include mixins.h2-spacing(1.8rem, 4vw, 5rem, 1rem, -20rem);
             }
 
             p {
-                margin-bottom: 5rem;
-                font-weight: 100;
-                line-height: 1.35rem;
+                font-size: clamp(.85rem, 1.1vw, 1rem); 
             }
         }
 
-        .playsContent__plays {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        &__plays {
+            @include mixins.flex-content(flex, none, center, center);
 
             img:nth-child(odd) {
                 width: clamp(3rem, 22vw, 20rem);
@@ -59,7 +53,7 @@
             margin-top: 4rem;
             text-align: center;
 
-            .buttons__style {
+            &__style {
                 background-color: #1B1B1B;
                 width: 40px;
                 height: 40px;
@@ -70,16 +64,20 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@include mixins.tablet-screen {
     .plays {    
         .playsContent {
-            .playsContent__text {
+            &__text {
                 h1 {
-                    left: 0;
+                    margin-left: -3.3rem; // Can I fix this?  
+                }
+
+                h2 {
+                    margin-top: -13rem; // Can I fix this? 
                 }
             }
 
-            .playsContent__plays {
+            &__plays {
                 img:nth-child(1){
                     margin-right: -3.5rem;
                 }
@@ -92,10 +90,20 @@
     };
 }
 
-@media screen and (max-width: 480px) {
+@include mixins.mobile-screen {
     .plays {
         .playsContent {
             padding: 10rem 2rem;
+
+            &__text {
+                h1 {
+                    margin-left: -1.3rem; // Can I fix this?
+                }
+
+                h2 {
+                    margin-top: -7rem; // Can I fix this?
+                }
+            }
         }
     }
 }

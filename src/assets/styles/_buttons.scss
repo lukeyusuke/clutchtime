@@ -1,0 +1,23 @@
+@use '../../assets/styles/variables'; 
+
+%btn-style {
+    &:hover {
+        color: variables.$secondary-color;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: variables.$primary-color;
+        transition: .5s cubic-bezier(1, 2, .2, .6);
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}

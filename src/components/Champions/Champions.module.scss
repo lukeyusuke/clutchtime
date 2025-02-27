@@ -1,0 +1,135 @@
+@use '../../assets/styles/variables';
+@use '../../assets/styles/displays';
+@use '../../assets/styles/mixins';
+@use '../../assets/styles/components';
+
+.champions{
+    @extend %center-display;
+    
+    .championsContent {
+        @extend %layout-width;
+        padding: 10rem 5rem 25rem 5rem;
+        
+        &__text {
+            text-align: right;
+            margin-bottom: 3rem;
+
+            h1 {
+                @extend %h1-style;
+                @include mixins.h1-spacing(7.4rem, 30vw, 29rem, -11rem);
+            }
+
+            h2 {
+                @include mixins.h2-spacing(2rem, 4vw, 5rem, 1rem, -17rem); 
+            }
+
+            p {
+                font-size: clamp(.7rem, 1.1vw, 1rem); 
+            }
+        }
+
+        &__box {
+            @include mixins.flex-content(flex, wrap, space-around, center);
+            margin-left: -4rem;
+            margin-top: -6rem;
+            gap: 1rem;
+            
+            &__stats {
+                @include mixins.flex-content(flex, wrap, center, center);
+                background-color: variables.$hover-bg;
+                position: relative;
+                padding: 0 1.5rem;
+                height: 240px;
+                width: 240px;
+
+                img {
+                    filter: grayscale(100%);
+                    transition: .5s;
+                }
+
+                &:hover {
+                    img {
+                        filter: none;
+                    }
+                }
+
+                span {
+                    font-size: 2rem;
+                    position: absolute;
+                    bottom: 13.5rem;
+                    right: 13.3rem;
+                }
+            }
+
+            &__stats:nth-child(1){
+                @include mixins.champion-box(10px, .5s, 5px, solid, #008346);
+            }
+
+            &__stats:nth-child(2){
+                @include mixins.champion-box(50px, .5s, 5px, solid, #FDBA22);
+            }
+
+            &__stats:nth-child(3){
+                @include mixins.champion-box(90px, .5s, 5px, solid, #17408B);
+            }
+
+            &__stats:nth-child(4){
+                @include mixins.champion-box(130px, .5s, 5px, solid, #D2153A);
+            }
+
+            &__stats:nth-child(5){
+                @include mixins.champion-box(170px, .5s, 5px, solid, #D9D9D9);
+            }
+        }
+    }
+}
+
+@include mixins.tablet-screen {
+    .champions {
+        .championsContent {
+            padding: 20rem 5rem;
+
+            .championsContent__text {
+                h1 {
+                    margin-left: -5rem;
+                }
+
+                h2 {
+                    margin-top: -10rem;
+                }
+            }
+
+            .championsContent__box {
+                justify-content: center;
+                margin: 0;
+                gap: 4rem;
+
+                .championsContent__box__stats:nth-child(1),
+                .championsContent__box__stats:nth-child(2),
+                .championsContent__box__stats:nth-child(3),
+                .championsContent__box__stats:nth-child(4),
+                .championsContent__box__stats:nth-child(5) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@include mixins.mobile-screen {
+    .champions {
+        .championsContent {
+            padding: 20rem 2rem;
+
+            .championsContent__text {
+                h1 {
+                    margin-left: -2.5rem;
+                }
+
+                h2 {
+                    margin-top: -5rem;
+                }
+            }
+        }
+    }
+}

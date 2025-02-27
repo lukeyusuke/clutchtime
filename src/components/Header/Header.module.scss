@@ -1,22 +1,23 @@
+@use '../../assets/styles/variables';
+@use '../../assets/styles/buttons';
+@use '../../assets/styles/displays';
+@use '../../assets/styles/mixins';
+@use '../../assets/styles/animations';
+
 #header {
-    display: flex;
-    justify-content: center;
+    @extend %center-display;
     
     .headerContent {
         padding: 3rem 5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1366px;
+        @include mixins.flex-content(flex, wrap, space-between, center);
+        @extend %layout-width;
         
         .logo {
             font-weight: bold;
             font-size: 1.5rem;
         }
 
-        .headerContent__menu {
+        &__menu {
             display: flex;
 
             .headerContent__menu__item {
@@ -26,7 +27,7 @@
                     transition: .5s;
 
                     &:hover {
-                        color: rgb(92, 92, 92)
+                        color: variables.$hover-link;
                     }
                 }
             }
@@ -42,25 +43,7 @@
                 overflow: hidden;
                 transition: .5s;
 
-                &:hover {
-                    color: #000;
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                    left: 0;
-                    width: 0;
-                    height: 100%;
-                    background-color: #FFF;
-                    transition: .5s cubic-bezier(1, 2, .2, .6);
-                }
-
-                &:hover::before {
-                    width: 100%;
-                }
+                @extend %btn-style;
             }
             
             .BiMenu {
@@ -87,9 +70,9 @@
                     cursor: pointer;
                     position: absolute;
                     top: 3rem;
-                    right: -63%;
-                    background-color: #1e1e1e;
-                    width: 120px;
+                    right: -63%; // I can fix this?
+                    background-color: variables.$hover-bg;
+                    width: 120px; // I can fix this?
                     padding: 1rem;
 
                     &.active {
@@ -102,7 +85,7 @@
                             transition: .5s;
 
                             &:hover {
-                                color: rgb(92, 92, 92)
+                                color: variables.$hover-link;
                             }
 
                             &:first-child {
@@ -120,7 +103,7 @@
                     right: 46%;
                     width: 20px;
                     height: 20px;
-                    background-color: #1e1e1e;
+                    background-color: variables.$hover-bg;
                 }
 
             }
@@ -128,10 +111,10 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@include mixins.tablet-screen {
     #header {
         .headerContent {
-            .headerContent__nav {
+            &__nav {
                 display: none;
                 
                 &.active {
@@ -167,22 +150,10 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@include mixins.mobile-screen {
     #header {
         .headerContent {
             padding: 3rem 2rem;
         }
-    }
-}
-
-@keyframes slideInFromBottom {
-    from {
-      transform: translateY(10%);
-      opacity: 0;
-    }
-    
-    to {
-      transform: translateY(0);
-      opacity: 1;
     }
 }

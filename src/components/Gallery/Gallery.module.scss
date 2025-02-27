@@ -1,0 +1,73 @@
+@use '../../assets/styles/displays';
+@use '../../assets/styles/buttons';
+@use '../../assets/styles/mixins';
+
+.gallery {
+    @extend %center-display;
+
+    .galleryContent {
+        @include mixins.flex-content(flex, wrap, space-around, center);
+        @extend %center-display;
+        padding: 5rem 5rem 25rem 5rem;
+
+        &__text {
+            h2 {
+                font-size: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+
+            button {
+                position: relative;
+                padding: 1rem 3rem;
+                letter-spacing: .2rem;
+                overflow: hidden;
+                transition: .5s;
+
+                @extend %btn-style;
+            }
+        }
+    }
+}
+
+@include mixins.tablet-screen {
+    .gallery {
+        .galleryContent {
+            padding: 10rem 5rem;
+            position: relative;
+
+            &__text {
+                h2 {
+                    text-align: center;
+                    padding-bottom: 5rem;
+                    font-size: 2rem;
+                }
+
+                button {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 260px;
+                    transform: translateX(-50%);
+                }
+            }
+
+            img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@include mixins.mobile-screen {
+    .gallery {
+        .galleryContent {
+            padding: 0rem 2em 12rem 2rem;
+            
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

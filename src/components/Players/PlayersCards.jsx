@@ -1,4 +1,4 @@
-import styles from './Players.module.css';
+import styles from './Players.module.scss';
 
 const PlayersCards = ({image, text, name, last_name ,height, weight, position, dt_birth, age, from}) => {
     return (
@@ -21,9 +21,11 @@ const PlayersCards = ({image, text, name, last_name ,height, weight, position, d
                         </div>
                     </div>
                     <div className={styles.playersContent__info__stats}>
+                        <div>
                         <p> Posição: {position}</p>
-                        <p> Nasceu em: {dt_birth}</p>
                         <p> Idade: {age} anos</p>
+                        </div>
+                        <p> Nasceu em: {dt_birth}</p>
                         <p> De: {from}</p>
                     </div>
                 </div>

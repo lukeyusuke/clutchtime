@@ -1,0 +1,38 @@
+@mixin h1-spacing($minVal, $defaultVal, $maxValue, $margin){
+    font-size: clamp($minVal, $defaultVal, $maxValue);
+    margin-left: $margin;    
+}
+
+@mixin h2-spacing($minVal, $defaultVal, $maxValue, $marginBottom, $marginTop){
+    font-size: clamp($minVal, $defaultVal, $maxValue);
+    margin-bottom: $marginBottom;
+    margin-top: $marginTop;
+}
+
+@mixin champion-box($marginTop, $transition, $borderWidth, $borderStyle, $borderColor){
+    margin-top: $marginTop;
+    transition: $transition;
+
+    &:hover {
+        border-bottom: $borderWidth $borderStyle $borderColor;
+    }
+}
+
+@mixin flex-content($display, $wrap, $justifyContent, $alignItems) {
+    display: $display;
+    flex-wrap: $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin tablet-screen {
+    @media(max-width: 1024px){
+       @content
+    }
+};
+
+@mixin mobile-screen {
+    @media (max-width: 480px){
+       @content
+    }
+};

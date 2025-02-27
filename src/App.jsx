@@ -5,8 +5,8 @@ import Gallery from './components/Gallery/Gallery';
 import Players from './components/Players/Players';
 import Plays from './components/Plays/Plays';
 import Footer from './components/Footer/Footer';
-import './App.css';
-import './Reset.css';
+import './App.scss';
+import './Reset.scss';
 
 function App() {
 

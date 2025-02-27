@@ -1,7 +1,9 @@
+@use '../../assets/styles/mixins';
+@use '../../assets/styles/animations';
+
 #footer {
     .footerContent {
         text-align: center;
-
         
         h1 {
             font-size: clamp(1.8rem, 4vw, 5rem);
@@ -13,10 +15,10 @@
             margin: 3rem 2rem 5rem 2rem;
         }
 
-        .footerContent__socialMedias {
+        &__socialMedias {
             margin-bottom: 1rem;
 
-            .footerContent__socialMedias__logo {
+            &__logo {
                 cursor: pointer;
                 width: 40px;
                 height: 40px;
@@ -40,12 +42,11 @@
             padding: 2rem 0;
             overflow-x: hidden;
             
-            
-            .carouselPlayers__box:first-child {
+            &__box:first-child {
                 animation: scrollXToLeft 50s linear infinite;
             }
             
-            .carouselPlayers__box:nth-child(2) {
+            &__box:nth-child(2) {
                 margin-left: -1600px;
                 animation: scrollXToRight 50s linear infinite;
             }
@@ -53,26 +54,17 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@include mixins.tablet-screen {
     #footer {
         .footerContent {
+            p {
+                padding: 0 2rem;
+            }
             .carouselPlayers {
                 img {
                     width: 2000px;
                 }
             }
         }
-    }
-}
-
-@keyframes scrollXToLeft {
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scrollXToRight {
-    to {
-        transform: translateX(100%);
     }
 }
