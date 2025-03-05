@@ -9,7 +9,6 @@ import './App.scss';
 import './Reset.scss';
 
 function App() {
-
   return (
     <div>
       <Header/>

@@ -1,6 +1,8 @@
 import styles from './Players.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const PlayersCards = ({image, text, name, last_name ,height, weight, position, dt_birth, age, from}) => {
+    const { t } = useTranslation();
     return (
         <>
             <div className={styles.playersContent__stats}>
@@ -12,21 +14,21 @@ const PlayersCards = ({image, text, name, last_name ,height, weight, position, d
                     </div>
                     <div className={styles.playersContent__info__hw}>
                         <div className={styles.playersContent__height}>
-                            <p> Altura </p>
+                            <p>{t('playersCard.stats.height')}</p>
                             <span>{height}</span>
                         </div>
                         <div className={styles.playersContent__weight}>
-                            <p> Peso </p>
+                            <p>{t('playersCard.stats.weight')}</p>
                             <span>{weight}</span>
                         </div>
                     </div>
                     <div className={styles.playersContent__info__stats}>
                         <div>
-                        <p> Posição: {position}</p>
-                        <p> Idade: {age} anos</p>
+                            <p>{t('playersCard.stats.position')}: {position}</p>
+                            <p>{t('playersCard.stats.age')}: {age} {t('playersCard.stats.years')}</p>
                         </div>
-                        <p> Nasceu em: {dt_birth}</p>
-                        <p> De: {from}</p>
+                        <p>{t('playersCard.stats.born')}: {dt_birth}</p>
+                        <p>{t('playersCard.stats.from')}: {from}</p>
                     </div>
                 </div>
             </div>

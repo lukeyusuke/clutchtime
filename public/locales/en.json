@@ -1,0 +1,118 @@
+{
+  "header": {
+    "logo": "LOGO",
+    "nav": {
+      "home": "Home",
+      "champions": "Champions",
+      "gallery": "Gallery",
+      "players": "Players",
+      "plays": "Plays"
+    },
+    "button": "SIGN IN",
+    "language": {
+      "pt": "Português",
+      "en": "English"
+    }
+  },
+
+  "home": {
+    "title": "BASKETBALL MEETS HERE",
+    "description": "The greatest players, the biggest champions, and all the stories<br/> that have ever been on the court—it's time for the orange ball to rise!",
+    "button": "Learn more about the sport"
+  },
+
+  "champions": {
+    "title": "CHAMPIONS",
+    "subtitle": "TEAMS WITH<br/> THE MOST TITLES",
+    "description": "The greatest NBA champions are back, always<br/> bringing excitement on and off the court",
+    "teams": {
+      "celtics": "Boston Celtics Logo - NBA Team",
+      "lakers": "Los Angeles Lakers Logo - NBA Team",
+      "warriors": "Golden State Warriors Logo - NBA Team",
+      "bulls": "Chicago Bulls Logo - NBA Team",
+      "spurs": "San Antonio Spurs Logo - NBA Team"
+    }
+  },
+
+  "gallery": {
+    "title": "Our gallery is always<br/> open for you",
+    "button": "SEE IN THE GALLERY",
+    "imageAlt": "NBA Players"
+  },
+
+  "players": {
+    "title": "PLAYERS",
+    "subtitle": "SOME OF THE BEST<br/> PLAYERS IN THE WORLD",
+    "player_list": {
+      "shai": {
+        "name": "Shai Gilgeous",
+        "last_name": "Alexander",
+        "height": "6'6",
+        "weight": "194lb",
+        "position": "Point Guard",
+        "birth_date": "12/07/1998",
+        "age": "26",
+        "from": "Toronto, Canada"
+      },
+      "edwards": {
+        "name": "Anthony",
+        "last_name": "Edwards",
+        "height": "6'4",
+        "weight": "225lb",
+        "position": "Shooting Guard",
+        "birth_date": "05/08/2001",
+        "age": "23",
+        "from": "Georgia, USA"
+      },
+      "lamelo": {
+        "name": "LaMelo",
+        "last_name": "Ball",
+        "height": "6'11",
+        "weight": "181lb",
+        "position": "Point Guard",
+        "birth_date": "22/08/2001",
+        "age": "23",
+        "from": "California, USA"
+      },
+      "ja": {
+        "name": "Ja",
+        "last_name": "Morant",
+        "description": "NBA Player",
+        "height": "6'2",
+        "weight": "174lb",
+        "position": "Point Guard",
+        "birth_date": "10/08/1999",
+        "age": "25",
+        "from": "South Carolina, USA"
+      }
+    }
+  },
+
+  "playersCard": {
+    "stats": {
+      "height": "Height",
+      "weight": "Weight",
+      "position": "Position",
+      "age": "Age",
+      "years": "years",
+      "born": "Born on",
+      "from": "From"
+    }
+  },
+  
+  "plays": {
+    "title": "PLAYS",
+    "subtitle": "INCREDIBLE PLAYS<br/>OF THE SEASON",
+    "description": "Check out the season's top plays, where each<br/> talent meets on the court.",
+    "play_video_1": "Play video 1",
+    "play_video_2": "Play video 2",
+    "play_video_3": "Play video 3"
+  },
+
+
+  "footer": {
+    "title": "Now it's your turn to<br/> step on the court",
+    "contact": "Get in touch with me",
+    "rights": "All rights reserved. Made by <b>Luke Yusuke</b>"
+  }
+}

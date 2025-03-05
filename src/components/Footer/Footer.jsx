@@ -5,15 +5,17 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { BiLogoGmail } from "react-icons/bi";
 import { BiLogoDiscord } from "react-icons/bi";
 import { motion } from 'framer-motion';
+import { Trans, useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <>
             <motion.footer id={styles.footer} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }}>
                 <div className={styles.footerContent}>
                     <motion.div className={styles.footerContent__text} initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                        <h1>AGORA É SUA VEZ DE<br /> ENTRAR EM QUADRA</h1>
-                        <p>Entre em contato comigo</p>
+                        <h1><Trans i18nKey='footer.title' components={[<br/>]}/></h1>
+                        <p>{t('footer.contact')}</p>
                     </motion.div>
 
                     <motion.div className={styles.footerContent__socialMedias} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
@@ -23,7 +25,7 @@ const Footer = () => {
                     </motion.div>
 
                     <motion.p className={styles.rights} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}>
-                        Todos os direitos reservados. Feito por <b>Luke Yusuke</b>
+                        <Trans i18nKey="footer.rights" components={{ b: <b /> }} />
                     </motion.p>
 
                     <motion.div className={styles.carouselPlayers} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.7 }}>

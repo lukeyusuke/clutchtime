@@ -1,0 +1,120 @@
+{
+  "header": {
+    "logo": "LOGO",
+    "nav": {
+      "home": "Início",
+      "champions": "Campeões",
+      "gallery": "Galeria",
+      "players": "Jogadores",
+      "plays": "Jogadas"
+    },
+    "button": "ENTRAR",
+    "language": {
+      "pt": "Português",
+      "en": "Inglês"
+    }
+  },
+
+  "home": {
+    "title": "O BASQUETE SE ENCONTRA AQUI",
+    "description": "Os maiores jogadores, os maiores campeões e todas as histórias<br/> que já passaram pela quadra, chegou a hora da bola laranja subir!!",
+    "button": "Mais sobre o esporte"
+  },
+
+  "champions": {
+    "title": "CAMPEOES",
+    "subtitle": "OS TIMES COM<br/> MAIS TÍTULOS",
+    "description": "Os maiores campeões da NBA estão de volta, sempre<br/> trazendo emoção para dentro e fora das quadras",
+    "teams": {
+      "celtics": "Logo do Boston Celtics - Time da NBA",
+      "lakers": "Logo do Los Angeles Lakers - Time da NBA",
+      "warriors": "Logo do Golden State Warriors - Time da NBA",
+      "bulls": "Logo do Chicago Bulls - Time da NBA",
+      "spurs": "Logo do San Antonio Spurs - Time da NBA"
+    }
+  },
+
+  "gallery": {
+    "title": "Nossa galeria está<br/> sempre aberta pra você",
+    "button": "VER NA GALERIA",
+    "imageAlt": "Jogadores da NBA"
+  },
+
+  "players": {
+    "title": "JOGADORES",
+    "subtitle": "ALGUNS DOS MELHORES<br/> JOGADORES DO MUNDO",
+    "player_list": {
+      "shai": {
+        "description": "Jogador da NBA",
+        "name": "Shai Gilgeous",
+        "last_name": "ALEXANDER",
+        "height": "1.98m",
+        "weight": "88kg",
+        "position": "Armador",
+        "birth_date": "12/07/1998",
+        "age": "26",
+        "from": "Toronto, Canadá"
+      },
+      "edwards": {
+        "description": "Jogador da NBA",
+        "name": "Anthony",
+        "last_name": "EDWARDS",
+        "height": "1.93m",
+        "weight": "102kg",
+        "position": "Ala-armador",
+        "birth_date": "05/08/2001",
+        "age": "23",
+        "from": "Geórgia, EUA"
+      },
+      "lamelo": {
+        "description": "Jogador da NBA",
+        "name": "LaMelo",
+        "last_name": "Ball",
+        "height": "2.01m",
+        "weight": "82kg",
+        "position": "Armador",
+        "birth_date": "22/08/2001",
+        "age": "23",
+        "from": "Califórnia, EUA"
+      },
+      "ja": {
+        "description": "Jogador da NBA",
+        "name": "Ja",
+        "last_name": "Morant",
+        "height": "1.88m",
+        "weight": "79kg",
+        "position": "Armador",
+        "birth_date": "10/08/1999",
+        "age": "25",
+        "from": "Carolina do Sul, EUA"
+      }
+    }
+  },
+
+  "playersCard": {
+    "stats": {
+      "height": "Altura",
+      "weight": "Peso",
+      "position": "Posição",
+      "age": "Idade",
+      "years": "anos",
+      "born": "Nasceu em",
+      "from": "De"
+    }
+  },
+
+  "plays": {
+    "title": "JOGADAS",
+    "subtitle": "JOGADAS INCRÍVEIS<br/>DA TEMPORADA",
+    "description": "Confira as jogadas da temporada, onde cada<br/>talento se encontra em quadra.",
+    "play1": "Vídeo da jogada 1",
+    "play2": "Vídeo da jogada 2",
+    "play3": "Vídeo da jogada 3"
+  },
+
+  "footer": {
+    "title": "AGORA É SUA VEZ DE<br/> ENTRAR EM QUADRA",
+    "contact": "Entre em contato comigo",
+    "rights": "Todos os direitos reservados. Feito por <b>Luke Yusuke</b>"
+  }
+}
