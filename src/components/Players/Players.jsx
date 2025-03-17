@@ -3,6 +3,8 @@ import shai from '../../assets/images/players/shai.png';
 import edwards from '../../assets/images/players/antman.png';
 import lamelo from '../../assets/images/players/lamelo.png';
 import morant from '../../assets/images/players/morant.png';
+import line1 from '../../assets/images/lines/line.png';
+import line2 from '../../assets/images/lines/line2.png';
 import { motion } from 'framer-motion';
 import PlayersCards from "./PlayersCards";
 import { Trans, useTranslation } from 'react-i18next';
@@ -30,8 +32,8 @@ const Players = () => {
             </motion.section>
 
             <motion.div className={styles.carousel} initial={{ opacity: 0}} whileInView={{opacity: 1}} transition={{ duration: .8}}>
-                <motion.img className={styles.carousel__names} src="./src/assets/images/lines/line.png" alt="Lista com nome de jogadores" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8}}/>
-                <motion.img className={styles.carousel__names} src="./src/assets/images/lines/line2.png" alt="Lista com nome de jogadores" initial={{ opacity: 0, x: -100 }} whileInView={{opacity: 1, x: 0}} animate={{ opacity: 1 }} transition={{ duration: .8}}/>
+                <motion.img className={styles.carousel__names} src={line1} alt="Lista com nome de jogadores" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8}}/>
+                <motion.img className={styles.carousel__names} src={line2} alt="Lista com nome de jogadores" initial={{ opacity: 0, x: -100 }} whileInView={{opacity: 1, x: 0}} animate={{ opacity: 1 }} transition={{ duration: .8}}/>
             </motion.div>
         </>
     );

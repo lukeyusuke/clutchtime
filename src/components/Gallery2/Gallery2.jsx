@@ -1,5 +1,5 @@
-import styles from './Gallery.module.scss';
-import galleryImg from '../../assets/images/Gallery/images.png' 
+import styles from './Gallery2.module.scss';
+import galleryImage from '../../assets/images/gallery/gallery.png'
 import { motion } from 'framer-motion';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -12,7 +12,7 @@ const Gallery = () => {
                     <h2><Trans i18nKey='gallery.title' components={[<br/>]}/></h2>
                     <button className="btn">{t('gallery.button')}</button>
                 </div>
-                <motion.img src={galleryImg} alt="Jogadores da NBA" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}  transition={{ duration: 0.8 }}/>
+                <motion.img src={galleryImage} alt="Jogadores da NBA" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}  transition={{ duration: 0.8 }}/>
             </div>
         </motion.section>
     );

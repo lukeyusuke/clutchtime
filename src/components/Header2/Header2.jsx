@@ -1,4 +1,4 @@
-import styles from './Header.module.scss';
+import styles from './Header2.module.scss';
 import BrazilFlag from '../../assets/images/header/brazil.png';
 import EnglishFlag from '../../assets/images/header/uk.png';
 import { BiChevronDown } from "react-icons/bi";
@@ -71,4 +71,3 @@ const Header = () => {
 }
 
 export default Header;
-
