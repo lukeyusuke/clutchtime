@@ -1,3 +1,4 @@
+@use '../../assets/styles/fonts';
 @use '../../assets/styles/mixins';
 @use '../../assets/styles/animations';
 
@@ -33,7 +34,7 @@
 
         .rights {
             b {
-                font-family: 'a dripping marker';
+                font-family: 'Dripping Marker', 'Calibri';
                 font-size: 1.5rem;
             }
         }

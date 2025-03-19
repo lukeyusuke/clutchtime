@@ -1,7 +1,10 @@
+@use './assets/styles/fonts';
+
 body{
+    font-family: 'Dunking Grotesk', Calibri;
+    font-weight: 500;
     background-color: #222;
     color: #FFF;
-    font-family: 'Dunking Grotesk';
     overflow-x: hidden;
 }
 
@@ -20,6 +23,6 @@ button {
     border-radius: .25rem;
     color: #FFF;
     cursor: pointer;
-    font-family: 'Dunking Grotesk';
+    font-family: 'Dunking Grotesk', Calibri;
     padding: .5rem 2rem;
 }
