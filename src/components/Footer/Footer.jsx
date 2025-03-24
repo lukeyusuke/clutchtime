@@ -20,8 +20,8 @@ const Footer = () => {
 
                     <motion.div className={styles.footerContent__socialMedias} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
                         <a href='https://www.linkedin.com/in/lukeyusuke/'><BiLogoLinkedin className={styles.footerContent__socialMedias__logo} /></a>
-                        <a href=""><BiLogoGmail className={styles.footerContent__socialMedias__logo} /></a>
-                        <a href=""><BiLogoDiscord className={styles.footerContent__socialMedias__logo} /></a>
+                        <a><BiLogoGmail className={styles.footerContent__socialMedias__logo} /></a>
+                        <a><BiLogoDiscord className={styles.footerContent__socialMedias__logo} /></a>
                     </motion.div>
 
                     <motion.p className={styles.rights} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}>

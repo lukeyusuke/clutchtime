@@ -58,6 +58,8 @@
 @include mixins.tablet-screen {
     #footer {
         .footerContent {
+            margin-top: 15rem;
+
             p {
                 padding: 0 2rem;
             }

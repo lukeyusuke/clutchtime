@@ -31,7 +31,7 @@ const Header = () => {
 
     return (
         <>
-            <motion.header id={styles.header} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+            <motion.header id={styles.header} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: .8 }}>
                 <div className={styles.headerContent}>
                     <motion.a href='' className={styles.logo} initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}  whileInView={{ opacity: 1, y:0 }}>{t('header.logo')}</motion.a>
                     <nav className={`${styles.headerContent__nav} ${menuActive ? styles.active : styles.close}`}>
@@ -53,7 +53,7 @@ const Header = () => {
                         <div className={styles.changeLanguage}>
                             <motion.div className={styles.changeLanguage__flag} onClick={toggleDropdown} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
                                 <img src={currentLang === "pt" ? BrazilFlag : EnglishFlag} alt="Flag" />
-                                <BiChevronDown className={styles.BiChevronDown} />
+                                <BiChevronDown className={styles.BiChevronDown}/>
                             </motion.div>
 
                             <motion.div className={`${styles.dropdown} ${dropdownActive ? styles.active : ''}`} initial={{ opacity: 0 }} animate={{ opacity: dropdownActive ? 1 : 0 }} transition={{ duration: 0.3 }}>

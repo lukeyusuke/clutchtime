@@ -20,7 +20,7 @@ const Champions = () => {
                     <p><Trans i18nKey='champions.description' components={[<br/>]}/></p>
                 </motion.div>
 
-                <motion.div className={styles.championsContent__box } initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
+                <motion.div className={styles.championsContent__box } initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: .8 }}>
                     <ChampionsCards champs={18} image={celtics} text={t('champions.teams.celtics')}/>
                     <ChampionsCards champs={17} image={lakers} text={t('champions.teams.lakers')}/>
                     <ChampionsCards champs='07' image={warriors} text={t('champions.teams.warriors')}/>

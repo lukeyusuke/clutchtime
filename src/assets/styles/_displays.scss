@@ -1,3 +1,5 @@
+@use '../../assets/styles/fonts';
+
 %center-display {
     display: flex;
     justify-content: center;
@@ -6,4 +8,12 @@
 %layout-width {
     width: 100%;
     max-width: 1366px;
+}
+
+%h1-style {
+    font-family: 'Dripping Marker', 'Calibri';
+    display: flex;
+    justify-content: center;
+    font-size: clamp(5rem, 35.8vw, 35rem);
+    opacity: 2%;
 }

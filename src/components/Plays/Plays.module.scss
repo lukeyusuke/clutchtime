@@ -1,14 +1,13 @@
 @use '../../assets/styles/displays';
 @use '../../assets/styles/mixins';
-@use '../../assets/styles/components';
 
 .plays{
     @extend %center-display;
     
     .playsContent {
-        position: relative;
-        padding: 2rem 5rem 25rem 5rem;
         @extend %layout-width;
+        position: relative;
+        padding: 5rem 5rem 25rem 5rem;
 
         &__text {
             text-align: right;
@@ -16,15 +15,17 @@
             
             h1 {
                 @extend %h1-style;
-                @include mixins.h1-spacing(8.4rem, 35.5vw, 235rem, -8rem);
             }
             
             h2 {
-                @include mixins.h2-spacing(1.8rem, 4vw, 5rem, 1rem, -20rem);
+                font-size: 4rem;
+                margin-top: -20rem;
+                margin-bottom: .5rem;
             }
 
             p {
-                font-size: clamp(.85rem, 1.1vw, 1rem); 
+                font-size: 1.1rem; 
+                line-height: 1.5
             }
         }
 
@@ -36,23 +37,6 @@
                     position: relative;            
                     width: 420px;
                     border-radius: .5rem;
-                }
-
-                &__controls { 
-                    .controlButton {
-                        position: absolute;
-                        background-color: rgb(42, 42, 42);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        height: 50px;
-                        border: none;
-                        border-radius: .5rem;
-                        font-size: 2rem;
-                        bottom: 48%;
-                        left: 52%;
-                        transform: translateX(-50%);
-                    }
                 }
             }
 
@@ -95,23 +79,12 @@
 @include mixins.tablet-screen {
     .plays {    
         .playsContent {
+            overflow-x: hidden;
+
             &__text {
-                h1 {
-                    margin-left: -3.3rem; // Can I fix this?  
-                }
-
                 h2 {
-                    margin-top: -13rem; // Can I fix this? 
-                }
-            }
-
-            &__plays {
-                img:nth-child(1){
-                    margin-right: -3.5rem;
-                }
-
-                img:nth-child(3){
-                    margin-left: -3.5rem;
+                    margin-top: -11rem;
+                    font-size: 3rem; 
                 }
             }
         }
@@ -121,15 +94,26 @@
 @include mixins.mobile-screen {
     .plays {
         .playsContent {
-            padding: 10rem 2rem;
+            padding: 10rem 1.5rem;
 
             &__text {
-                h1 {
-                    margin-left: -1.3rem; // Can I fix this?
-                }
+                text-align: center;
 
                 h2 {
-                    margin-top: -7rem; // Can I fix this?
+                    font-size: 1.8rem;
+                    margin-top: -6rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    padding: 0 1.5rem;
+                }
+            }
+            
+            &__plays {
+                .slider__controller {
+                    bottom: 3rem;
                 }
             }
         }

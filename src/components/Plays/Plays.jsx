@@ -16,98 +16,110 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 const Plays = () => {
-    const { t } = useTranslation();
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
-    const videoRefs = useRef([]);
+  const { t } = useTranslation();
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const videoRefs = useRef([]);
 
-    const [playVideo, setPlayVideo] = useState(Array(5).fill(false));
-    const [endVideo, setEndVideo] = useState(Array(5).fill(false));
-    const videos = [spurs, okc, pistons, lamelo, blazers];
-    const [activeVideo, setActiveVideo] = useState(0);
+  const [playVideo, setPlayVideo] = useState(Array(5).fill(false));
+  const [endVideo, setEndVideo] = useState(Array(5).fill(false));
+  const videos = [spurs, okc, pistons, lamelo, blazers];
+  const [activeVideo, setActiveVideo] = useState(0);
 
-    const togglePlayVideo = (index) => {
-        const video = videoRefs.current[index];
-        if (!video) return;
+  const togglePlayVideo = (index) => {
+    if (index !== activeVideo) return;
 
-        if (video.paused) {
-            video.play();
-            setPlayVideo((prev) => prev.map((val, i) => (i === index ? true : val)));
-            setEndVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
-        } else {
-            video.pause();
-            setPlayVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
-        }
-    };
+    const video = videoRefs.current[index];
+    if (!video) return;
 
-    const restartVideo = (index) => {
-        const video = videoRefs.current[index];
-        if (!video) return;
+    if (video.paused) {
+      video.play();
+      setPlayVideo((prev) => prev.map((val, i) => (i === index ? true : val)));
+      setEndVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
+    } else {
+      video.pause();
+      setPlayVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
+    }
+  };
 
-        video.currentTime = 0;
-        video.play();
-        setEndVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
-        setPlayVideo((prev) => prev.map((val, i) => (i === index ? true : val)));
-    };
+  const restartVideo = (index) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
 
-    const handleVideoEnd = (index) => {
-        restartVideo(index);
-    };
+    video.currentTime = 0;
+    video.play();
+    setEndVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
+    setPlayVideo((prev) => prev.map((val, i) => (i === index ? true : val)));
+  };
 
-    return (
-        <motion.section  id="plays" className={styles.plays} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div className={styles.playsContent}>
-                <motion.div className={styles.playsContent__text} initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-                <h1>{t('plays.title')}</h1>
-                <h2><Trans i18nKey="plays.subtitle" components={[<br/>]}/></h2>
-                <p><Trans i18nKey="plays.description" components={[<br/>]}/></p>
-                </motion.div>
+  const handleVideoEnd = (index) => {
+    restartVideo(index);
+  };
 
-                <motion.div className={styles.playsContent__plays}>
-                    <Swiper effect={'coverflow'} grabCursor={true} centeredSlides={true} loop={true} slidesPerView={3} coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }} navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }} modules={[EffectCoverflow, Navigation]}className={styles.swiper__container} onSlideChange={(swiper) => {
-                        const newActiveVideo = swiper.realIndex;
+  return (
+    <motion.section id="plays" className={styles.plays} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+      <div className={styles.playsContent}>
+        <motion.div className={styles.playsContent__text} initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+          <h1>{t('plays.title')}</h1>
+          <h2><Trans i18nKey="plays.subtitle" components={[<br />]} /></h2>
+          <p><Trans i18nKey="plays.description" components={[<br />]} /></p>
+        </motion.div>
 
-                        videoRefs.current.forEach((video, index) => {
-                            if (video && index !== newActiveVideo && !video.paused) {
-                                video.pause();
-                                setPlayVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
-                            }
-                        });
+        <motion.div className={styles.playsContent__plays}>
+          <Swiper effect={'coverflow'} grabCursor={true} centeredSlides={true} loop={true} slidesPerView={1} spaceBetween={10} coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5}} navigation={{ prevEl: prevRef.current, nextEl: nextRef.current}} modules={[EffectCoverflow, Navigation]} className={styles.swiper__container}
+            breakpoints={{
+              580: {
+                slidesPerView: 2,
+              },
+              1025: {
+                slidesPerView: 3,
+              },
+            }}
+            onSlideChange={(swiper) => {
+              const newActiveVideo = swiper.realIndex;
 
-                        const newVideo = videoRefs.current[newActiveVideo];
+              videoRefs.current.forEach((video, index) => {
+                if (video && index !== newActiveVideo && !video.paused) {
+                  video.pause();
+                  setPlayVideo((prev) => prev.map((val, i) => (i === index ? false : val)));
+                }
+              });
 
-                        if (newVideo && newVideo.paused && !endVideo[newActiveVideo]) {
-                            newVideo.play();
-                            setPlayVideo((prev) => prev.map((val, i) => (i === newActiveVideo ? true : val)));
-                        }
-                            setActiveVideo(newActiveVideo);
-                        }}
+              const newVideo = videoRefs.current[newActiveVideo];
+              if (newVideo && newVideo.paused && !endVideo[newActiveVideo]) {
+                newVideo.play();
+                setPlayVideo((prev) => prev.map((val, i) => (i === newActiveVideo ? true : val)));
+              }
 
-                        onSwiper={(swiper) => { setTimeout(() => { 
-                            swiper.params.navigation.prevEl = prevRef.current; 
-                            swiper.params.navigation.nextEl = nextRef.current; 
-                            swiper.navigation.init(); 
-                            swiper.navigation.update()
-                            })}}>
-                        {videos.map((videoSrc, index) => (
-                            <SwiperSlide key={index}>
-                                <div className={styles.playContent__wrapper}>
-                                    <video className={styles.playContent__wrapper__video} ref={(el) => (videoRefs.current[index] = el)} onEnded={() => handleVideoEnd(index)} onClick={() => togglePlayVideo(index)}>
-                                        <source src={videoSrc} type="video/mp4"/>
-                                    </video>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                        <div className={styles.slider__controller}>
-                            <div ref={prevRef} className={styles.btnPrev}><MdKeyboardArrowLeft /></div>
-                            <div ref={nextRef} className={styles.btnNext}><MdKeyboardArrowRight /></div>
-                            <div className={styles.swiperPagination}></div>
-                        </div>
-                </motion.div>
-            </div>
-        </motion.section>
-    );
+              setActiveVideo(newActiveVideo);
+            }}
+            onSwiper={(swiper) => {
+              setTimeout(() => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
+            }}>
+            {videos.map((videoSrc, index) => (
+              <SwiperSlide key={index}>
+                <div className={styles.playContent__wrapper}>
+                  <video className={styles.playContent__wrapper__video} ref={(el) => (videoRefs.current[index] = el)} onEnded={() => handleVideoEnd(index)} onClick={() => togglePlayVideo(index)}>
+                    <source src={videoSrc} type="video/mp4" />
+                  </video>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className={styles.slider__controller}>
+            <div ref={prevRef} className={styles.btnPrev}><MdKeyboardArrowLeft/></div>
+            <div ref={nextRef} className={styles.btnNext}><MdKeyboardArrowRight/></div>
+            <div className={styles.swiperPagination}></div>
+          </div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
 };
 
 export default Plays;

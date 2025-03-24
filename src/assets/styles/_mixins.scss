@@ -1,14 +1,3 @@
-@mixin h1-spacing($minVal, $defaultVal, $maxValue, $margin){
-    font-size: clamp($minVal, $defaultVal, $maxValue);
-    margin-left: $margin;    
-}
-
-@mixin h2-spacing($minVal, $defaultVal, $maxValue, $marginBottom, $marginTop){
-    font-size: clamp($minVal, $defaultVal, $maxValue);
-    margin-bottom: $marginBottom;
-    margin-top: $marginTop;
-}
-
 @mixin champion-box($marginTop, $transition, $borderWidth, $borderStyle, $borderColor){
     margin-top: $marginTop;
     transition: $transition;
