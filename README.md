@@ -22,7 +22,7 @@
 </p>
 
 <h4 align="center">
-    <a href="https://clutchtime.vercel.app">Clique para visitar o nosso site</a> <!-- Ainda vou colocar o site no ar -->
+    <a href="https://clutch-time.vercel.app">Clique para visitar o nosso site</a> <!-- Ainda vou colocar o site no ar -->
 </h4>
 <br/>
 
